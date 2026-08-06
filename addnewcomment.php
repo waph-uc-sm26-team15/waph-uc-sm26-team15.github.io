@@ -5,7 +5,7 @@
 	$token = $_POST["nocsrftoken"];
 	if (!isset($token) || ($token != $_SESSION["nocsrftoken"])) {
 		session_destroy();
-		echo "<script>alert('CSRF attack is detected!';</script>)";
+		echo "<script>alert('CSRF attack is detected!');</script>";
         header("Refresh:0; url=form.php");
 		die();
 	}
